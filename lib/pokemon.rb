@@ -23,5 +23,5 @@ class Pokemon
     pokemans = database.execute("SELECT id, name, type FROM pokemon WHERE id = ?", id).flatten
     Pokemon.new({id: pokemans[0], name: pokemans[1], type: pokemans[2], db: database})
   end
-
+  
 end
